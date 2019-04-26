@@ -15,7 +15,6 @@ This tutorial repository is organised as followed :
 
 2. Repositories : 
 
-* Create a remote repository
 * Push to a remote repository
 * Clone a remote repository
 * Push from a cloned repositrory
