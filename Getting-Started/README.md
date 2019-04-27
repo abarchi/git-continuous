@@ -36,14 +36,14 @@
 
 To set up the default username and e-mail address for Git that will be used to identify the person who commits the change, use this command : 
 
-```
+```sh
 $ git config --global user.name "<*your git username*>"
 $ git config --global user.email "<*your email related to git*>"
 ```
 
 ### Create a repository
 
-```
+```sh
 $ mkdir tutorial
 
 $ cd tutorial
@@ -55,7 +55,7 @@ $ git init
 
 Use the "status" command to confirm the status of our Git working tree and index.
 
-```
+```sh
 $ vim sample.txt
 Add this line to your sample.txt : "*Git commands even a monkey can understand*"
 $ git status
@@ -67,7 +67,7 @@ You will need to add "sample.txt" to the index first in order to track its chang
 > TIP : 
 > Specify "." instead of individual file names, if you wish to add all of the changed files to the index.
 
-```
+```sh
 $ git add <*sample.txt*> **OR** $ git add .
 $ git status
 # On branch master # # Initial commit # # Changes to be committed: # (use "git rm --cached ..." to unstage) # # new file: sample.txt # 
@@ -75,7 +75,7 @@ $ git status
 
 Now that "sample.txt" has been added to the index, we can proceed with committing the file.
 
-```
+```sh
 $ git commit -m "<*Your commit message*>"
 [master (root-commit) 116a286] first commit 0 files changed, 0 insertions(+), 0 deletions(-) create mode 100644 sample.txt 
 
@@ -85,7 +85,7 @@ $ git status
 
 We can see the newly added commit in the repository's history log with the "log" command.
 
-```
+```sh
 $ git log commit 
 ac56e474afbbe1eab9ebce5b3ab48ac4c73ad60e Author: eguchi Date: Thu Jul 12 18:00:21 2012 +0900 <*Your commit message*> 
 ```
@@ -93,6 +93,6 @@ ac56e474afbbe1eab9ebce5b3ab48ac4c73ad60e Author: eguchi Date: Thu Jul 12 18:00:2
 > NOTE :
 > If you prefer a GUI way of diving into the repository history, you can do so using "gitk" that is shipped along side with Git.
 
-```
+```sh
 $ gitk
 ```

@@ -16,16 +16,16 @@
 We will register a remote repository name as "origin".
 To add a remote repository, use the "remote" command. is used as an alias of a remote repository, followed by with the URL of the remote repository.
 
-```
+```sh
 $ git remote add <*URL of the remote repository*>
 $ git remote add origin https://[your_space_id].backlogtool.com/git/[your_project_key]/tutorial.git
 ```
 
-[!!!!!!!! Ajoute un exemple plus concret de git remote add !!!!!!!!]
+[!!!!!!!! Ajoute un exemple plus concret de git remote add + une meilleur explication de la branche remote !!!!!!!!]
 
 To push changes to the remote repository, use the "push" command.
 
-```
+```sh
 $ git push -u origin master
 Username: <username>
 Password: <password>
@@ -36,7 +36,7 @@ Total 3 (delta 0), reused 0 (delta 0) To https://monkey.backlogtool.com/git/BLGG
 > TIP : 
 > RTFM about git push
 
-```
+```sh
 This might *help* you ;)
 
 git push --help *OR* man git push
@@ -47,7 +47,7 @@ git push --help *OR* man git push
 Use the "clone" command to copy a remote repository.
 Substitute with the remote repository URL and with the new directory name in which the remote contents will be placed.
 
-```
+```sh
 $ git clone https://monkey.backlogtool.com/git/BLGGIT/tutorial.git tutorial2
 Cloning into 'tutorial2'... 
 Username: <username>
@@ -71,7 +71,7 @@ Git commands even a monkey can understand
 
 Then : 
 
-```
+```sh
 $ git add sample.txt
 $ git commit -m "append description of the add command"
 [master 1ef5c8c] append description of the add command
@@ -80,7 +80,7 @@ $ git commit -m "append description of the add command"
 
 Now, let's push this new commit to the remote repository.
 
-```
+```sh
 $ git push
 Username: <username>
 Password: <password>
@@ -99,7 +99,7 @@ Now that our remote repository is up to date with the changes from "tutorial2", 
 
 To execute a pull, use the "pull" command. If you do not include the repository name, the pull will be executed on the repository under the alias of "origin".
 
-```
+```sh
 $ git pull origin master
 Username: <username>
 Password: <password>
@@ -113,7 +113,7 @@ sample.txt | 1 +
 
 Let's verify that the history is updated with the "log" command.
 
-```
+```sh
 $ git log
 commit 3da09c1134a41f2bee854a413916e4ebcae7318d
 Author: eguchi
@@ -140,7 +140,7 @@ add: Register a change in an index
 Open the "sample.txt" file in the "tutorial" directory. 
 Add the bold text below to the file and commit.
 
-```
+```sh
 $ cd ../tutorial
 $ vim sample.txt
 
@@ -151,7 +151,7 @@ add: Register a change in an index
 
 So let's do :
 
-```
+```sh
 $ git add sample.txt
 $ git commit -m "append description of the commit command"
 [master 95f15c9] append description of the commit command
@@ -169,7 +169,7 @@ add: Register a change in an index
 
 Let's do it again : 
 
-```
+```sh
 $ git add sample.txt
 $ git commit -m "append description of the pull command"
 [master 4c01823] append description of the pull command
@@ -178,7 +178,7 @@ $ git commit -m "append description of the pull command"
 
 Now push the change from "tutorial2" to the remote repository.
 
-```
+```sh
 $ git push
 Username: <username>
 Password: <password>
@@ -193,7 +193,7 @@ To https://monkey.backlogtool.com/git/BLGGIT/tutorial.git
 
 Now, we are going to push the commit from our "tutorial" repository to the remote repository.
 
-```
+```sh
 $ git push
 Username: <username>
 Password: <password>
@@ -215,7 +215,7 @@ Let's execute a pull to acquire the most recent change set from the remote repos
 
 So let's do : 
 
-```
+```sh
 $ git pull origin master
 Username:
 Password:
@@ -249,7 +249,7 @@ Resolve the conflict ! :)
 Are you done editing your file ?
 If yes, don't forget to commit your changes !
 
-```
+```sh
 $ git add sample.txt
 $ git commit -m "merge"
 [master d845b81] merge 
@@ -259,7 +259,7 @@ YEAHHHH ! Now we are up to date with the latest change(s) from the remote reposi
 
 Let's verify the accuracy of the repository history using the "log" command : 
 
-```
+```sh
 $ git log --graph --oneline
 * d845b81 merge
 |\
