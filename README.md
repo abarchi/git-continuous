@@ -47,11 +47,4 @@ This tutorial repository is organised as followed :
 * Change commit using rebase
 * Merge --squash
 
-6. Pull request : 
-
-* Modifying a branch
-* Create a pull request
-* Review and merge
-* Merge conflicts
-
 > ** Each directory is a chapter and in each chapter you will also see a README file specific to the topic. **
