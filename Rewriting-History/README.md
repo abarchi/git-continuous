@@ -139,8 +139,8 @@ error: could not apply 99daed2...
 commit hint: after resolving the conflicts, mark the corrected paths hint: with 'git add <paths>' or 'git rm <paths>' hint: and commit the result with 'git commit' 
 ```
 
-As you can see, a conflict has occured from your fake text file.
-Manualy resolve it and proceed with a "git add" and a "git commit".
+As you can see, a conflict has occurred from your fake text file.
+Manually resolve it and proceed with a "git add" and a "git commit".
 
 ### Squash commits with rebase
 
