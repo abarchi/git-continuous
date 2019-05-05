@@ -266,7 +266,7 @@ With the "my-issue-3" branch rebased onto "master", we can now issue a **fast-fo
 
 Switch over to the master branch and merge "issue3" with "master".
 
-````sh
+```sh
 $ git checkout master
 Switched to branch 'master'
 $ git merge my-issue-3
