@@ -1,8 +1,11 @@
 **!CAUTION!**
 
 > NOTICE :
-> With this chapter I recommand you to create your own repository with your own commits and messages related, because it's a good exercise and it will help us to do more complexe command with git. 
+>
+> With this chapter I recommand you to create your own repository with your own commits and messages related, because it's a good exercise and it will help us to do more complexe command with git.
+>
 > Create also a fake text file to test and create a nice log history of your code changes.
+>
 
 ## Rewriting history
 
@@ -91,15 +94,21 @@ HEAD is now at 326fc9f append description of the add command
 ```
 
 > NOTE :
+>
 > The 2 last "~" after HEAD means the 2 last commit from where your HEAD is.
+>
 
 If you now look your fake file text you will see your 2 last modification deleted.
 You can verify that with a nice "git log" command.
 
-> NOTE : 
+> NOTE :
+>
 > ORIG_HEAD points to the original commit before reset actually takes place.
+>
 > This may come in handy especially when you accidentally issue a reset.
+>
 > You can restore the previous history by executing a reset to ORIG_HEAD.
+>
 
 ```sh
 $ git reset --hard ORIG_HEAD
@@ -121,7 +130,9 @@ $ git branch my-cherry-pick-branch
 ```
 
 > NOTE :
+>
 > Our "master" is the origin branch of our second branch.
+>
 
 Checkout on your second branch "my-cherry-pick-branch".
 
@@ -154,8 +165,10 @@ To do that we have to pass in interactive rebasing :
 $ git rebase -i HEAD~~
 ```
 
-> NOTE : 
+> NOTE :
+>
 > The 2 last "~" after HEAD means the 2 last commit from where your HEAD is.
+>
 
 Your default text editor should open and you will be on rebase interactive mode showing commits from HEAD to HEAD~~ as shown below.
 
