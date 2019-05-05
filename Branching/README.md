@@ -17,8 +17,8 @@
 Create a new directory and initialize a Git repository. We are going to create a directory named "awesome-tutorial".
 
 ```sh
-$ mkdir tutorial
-$ cd tutorial
+$ mkdir awesome-tutorial
+$ cd awesome-tutorial
 $ git init
 Initialized empty Git repository in /Users/eguchi/Desktop/tutorial/.git/
 ```
