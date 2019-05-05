@@ -180,7 +180,10 @@ pick 0d4a808 append description of the pull command
 ```
 
 On the second line/commit, change the word "pick" to "squash", then save and quit.
-Then the editor will now prompt you to edit the commit message of this newly formed commit. Edit the commit message, then save and quit.
+
+Then the editor will now prompt you to edit the commit message of this newly formed commit.
+
+Edit the commit message, then save and quit.
 
 And now if you log your commit references you will see the details of your rebase process : 
 
