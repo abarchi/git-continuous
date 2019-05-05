@@ -195,6 +195,8 @@ $ git reflog
 
 So when you got your repository, your branch master and few commits you can log your commits :
 
+We are going to amend the commit with the message "append description of the commit command".
+
 Let's do :
 
 ```sh
