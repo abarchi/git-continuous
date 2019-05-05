@@ -197,7 +197,7 @@ myfile.txt | 2 ++
  1 files changed, 2 insertions(+), 0 deletions(-)
 ```
 
-Look at your git logs and see if "my-issue-2" branch history commit still there or not ? ;)
+Look at your git logs and see if "my-issue-2" branch history commit still exist or not ? ;)
 
 Now let's merge "my-issue-3" into "master".
 
@@ -214,7 +214,7 @@ Are you finish ?
 
 Now you can commit your changes to resolve the conflict and you're done.
 
-Look at your git logs and see if "my-issue-3" branch history commit still there or not ? ;)
+Look at your git logs and see if "my-issue-3" branch history commit still exist or not ? ;)
 
 ### Rebase a branch
 
@@ -249,7 +249,7 @@ If you would prefer to skip this patch, instead run "git rebase --skip".
 To check out the original branch and stop rebasing run "git rebase --abort".
 ```
 
-When a conflict occurs during the rebase, you will have to resolve it **immediately** in order to resume the rebase operation and don't commit any new changes while the rebase process".
+When a conflict occurs during the rebase, you will have to resolve it **immediately** in order to resume the rebase operation and don't commit any new changes while the rebase process.
 
 Resolve the conflict.
 
@@ -275,6 +275,8 @@ Fast-forward
 myfile.txt | 1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
 ```
+
+Look at your git logs and see if "my-issue-3" branch history commit still exist or not ? ;)
 
 Go see myfile.txt and check if the content is the same as the non fast-forward merge from the last merge.
 
