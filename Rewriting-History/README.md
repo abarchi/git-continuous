@@ -1,6 +1,8 @@
-** CAUTION **
+**CAUTION**
 
-With this chapter I recommand you to create your own repository with your own commits and messages related, because it's a good exercise and it will help us to do more complexe command with git. Create also a fake text file to test and create a nice log history of your code changes.
+> NOTICE :
+> With this chapter I recommand you to create your own repository with your own commits and messages related, because it's a good exercise and it will help us to do more complexe command with git. 
+> Create also a fake text file to test and create a nice log history of your code changes.
 
 ## Rewriting history
 
@@ -46,7 +48,7 @@ Log your history commits and your commit message should now be updated.
 
 So when you got your repository, your branch master and few commits you can log your commits :
 
-We are going to undo the "append description of the pull command" commit using the "revert" command.
+We are going to undo the "append description of the pull command" commit or your last commit using the "revert" command.
 
 Examine the history log using the log command.
 
@@ -54,7 +56,10 @@ Open your fake text file and verify the state of your modification.
 It should like this for example :
 
 ```sh
-Git commands even a monkey can understand add: Register a change in an index commit: Save the status of an index pull: Obtain the content of the remote repository
+Git commands even a monkey can understand 
+add: Register a change in an index 
+commit: Save the status of an index 
+pull: Obtain the content of the remote repository
 ```
 
 Let's undo the latest HEAD, so your last commit message and revert it with the "git revert" command : 
