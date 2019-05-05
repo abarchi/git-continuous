@@ -1,4 +1,4 @@
-**CAUTION**
+**!CAUTION!**
 
 > NOTICE :
 > With this chapter I recommand you to create your own repository with your own commits and messages related, because it's a good exercise and it will help us to do more complexe command with git. 
@@ -53,7 +53,7 @@ We are going to undo the "append description of the pull command" commit or your
 Examine the history log using the log command.
 
 Open your fake text file and verify the state of your modification.
-It should like this for example :
+It should look like this for example :
 
 ```sh
 Git commands even a monkey can understand 
@@ -74,7 +74,7 @@ Revert "append description of the pull command"
 Open your fake text file again. If the above procedure has been done correctly, the last modification/commit you added should no longer exist.
 You can for example revert your last commit you changed with "commit --amend" to come back to the previous state.
 
-Git log you history and see by yourself ;)
+Git log your history and see by yourself ;)
 
 ### Reset
 
@@ -96,9 +96,10 @@ HEAD is now at 326fc9f append description of the add command
 If you now look your fake file text you will see your 2 last modification deleted.
 You can verify that with a nice "git log" command.
 
-ORIG_HEAD points to the original commit before reset actually takes place.
-This may come in handy especially when you accidentally issue a reset.
-You can restore the previous history by executing a reset to ORIG_HEAD.
+> NOTE : 
+> ORIG_HEAD points to the original commit before reset actually takes place.
+> This may come in handy especially when you accidentally issue a reset.
+> You can restore the previous history by executing a reset to ORIG_HEAD.
 
 ```sh
 $ git reset --hard ORIG_HEAD
@@ -114,14 +115,20 @@ So when you got your repository, your branch master and few commits you can log 
 In this step, we are going to create a new commit in the master branch that is a copy of the commit of your last message residing on a different branch within the same repository.
 
 First of all, create a second branch from "master" branch.
-Our "master" is the origin branch of our second branch.
 
-Checkout on your second branch named for example "my-feature-branch".
+```sh
+$ git branch my-cherry-pick-branch
+```
+
+> NOTE :
+> Our "master" is the origin branch of our second branch.
+
+Checkout on your second branch "my-cherry-pick-branch"
 Add some commits and switch back to your master branch.
 
 Examine your log history : 
 
-Use the cherry-pick command and lets copy your first commit hash of your "my-feature-branch".
+Use the cherry-pick command and lets copy your first commit hash of your "my-cherry-pick-branch".
 
 Your cherry-pick command should look like this : 
 
