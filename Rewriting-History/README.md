@@ -124,6 +124,7 @@ $ git branch my-cherry-pick-branch
 > Our "master" is the origin branch of our second branch.
 
 Checkout on your second branch "my-cherry-pick-branch".
+
 Add some commits and switch back to your master branch.
 
 Examine your log history : 
