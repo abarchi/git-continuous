@@ -222,7 +222,7 @@ Look at your git logs and see if "my-issue-3" branch history commit still there 
 
 Undo merge "my-issue-3" into "master".
 
-````sh
+```sh
  $ git reset --hard HEAD~
 ```
 
