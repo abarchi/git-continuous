@@ -63,11 +63,12 @@ $ git checkout <branch>
 $ git checkout -b <branch>
 ```
 
-Now that you are on your awesome branch, let's add bold text in myfile.txt : 
+Now that you are on your awesome branch, let's add this bold text in myfile.txt : 
+"**add: Register a change in an index**"
 
 ```
 Git commands even a monkey can understand
-**add: Register a change in an index**
+add: Register a change in an index
 ```
 
 I let you commit your changes ;)
