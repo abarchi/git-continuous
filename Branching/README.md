@@ -228,7 +228,7 @@ Undo merge "my-issue-3" into "master".
 
 And switch over to "my-issue-3" branch and rebase onto the master branch.
 
-````sh
+```sh
 $ git checkout my-issue-3
 Switched to branch 'my-issue-3'
 $ git rebase master
