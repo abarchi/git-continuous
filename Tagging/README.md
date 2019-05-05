@@ -71,7 +71,7 @@ Let's add an annotated tag, with this command which opens the default text edito
 $ git tag -a <tagname>
 ```
 
-If you want to bypass the text editor and add he note alongside the tag creation, use -am option :
+If you want to bypass the text editor and add the note alongside the tag creation, use -am option :
 
 ```sh
 $ git tag -am "Git Beginner's Guide for Dummies" 0.02
