@@ -75,16 +75,16 @@ I let you commit your changes ;)
 
 ### Merge branches
 
-NOW let's merge issue1 with master, here comes the command for merging branches : 
+NOW let's merge myawesome-branch with master, here comes the command for merging branches : 
 
 ```sh
-$ git merge <*branch*>
+$ git merge <branch>
 ```
 
 And with this command, the specified commit will be merged to the current active branch.
 
 ```sh
-`$ git merge <*commit*>
+`$ git merge <commit>
 ```
 
 To merge commits into the master branch, let's now switch over to the master branch.
@@ -100,7 +100,7 @@ As you see the change added on "myawesome-branch" described in the previous page
 Now let's do :
 
 ```sh
-$ git merge issue1
+$ git merge myawesome-branch
 Updating 1257027..b2b23c4
 Fast-forward
 myfile.txt | 1 +
@@ -117,7 +117,7 @@ Perfect, so now we can remove "myawesome-branch".
 Run the following command to delete "myawesome-branch".
 
 ```sh
-$ git branch -d issue1
+$ git branch -d myawesome-branch
 Deleted branch issue1 (was b2b23c4).
 ```
 
@@ -136,7 +136,7 @@ Create 2 branches :
 $ git branch my-issue-2
 $ git branch my-issue-3
 $ git checkout my-issue-2
-Switched to branch 'issue2'
+Switched to branch 'my-issue-2'
 $ git branch -avv
 * my-issue-2
   my-issue-3
@@ -145,6 +145,7 @@ $ git branch -avv
 
 Add bold text in your file myfile.txt :
 
+**commit: Save the status of an index**
 
 ```
 Git commands even a monkey can understand
@@ -153,15 +154,17 @@ commit: Save the status of an index
 ```
 
 Commit your changes ;)
-Now switch to my-issue-3
+Now switch to my-issue-3.
 
 ```sh
-$ git checkout issue3
-Switched to branch 'issue3'
+$ git checkout my-issue-3
+Switched to branch 'my-issue-3'
 ```
 my-issue-3 has the same commit history than master.
 
 Add the bold text below to myfile.txt and commit the change :
+
+**pull: Obtain the content of the remote repository**
 
 ```
 Git commands even a monkey can understand
@@ -176,22 +179,29 @@ Commit your changes.
 
 Let's merge "my-issue-2" and "my-issue-3" into master.
 
+>NOTICE : 
+> Check Fast-forward and non Fast-forward merge state.
+> "git merge –no-ff" : The “no-fast-forward” merge option preserves the branch history and creates a merge commit, this is what happens when you merge and there is a conflict.
+> A perfect merge without conflict is made in Fast-forword state.
+
 Switch to master and merge "my-issue-2" with it.
 
 ```sh
 $ git checkout master
 Switched to branch 'master'
-$ git merge issue2
+$ git merge my-issue-2
 Updating b2b23c4..8f7aa27
 Fast-forward
 myfile.txt | 2 ++
  1 files changed, 2 insertions(+), 0 deletions(-)
 ```
 
+Look at your git logs and see if "my-issue-2" branch history commit still there or not ? ;)
+
 Now let's merge "my-issue-3" into "master".
 
 ````sh
-$ git merge issue3
+$ git merge my-issue-3
 Auto-merging myfile.txt
 CONFLICT (content): Merge conflict in myfile.txt
 Automatic merge failed; fix conflicts and then commit the result.
@@ -203,11 +213,13 @@ Are you finish ?
 
 Now you can commit your changes to resolve the conflict and you're done.
 
+Look at your git logs and see if "my-issue-3" branch history commit still there or not ? ;)
+
 ### Rebase a branch
 
-**Another approach we can take to integrate "issue3" branch into the master branch is by using the rebase command.**
+**Another approach we can take to integrate "my-issue-3" branch into the master branch is by using the rebase command.**
 
-Undo the previous merge.
+Undo merge "my-issue-3" into "master".
 
 ````sh
  $ git reset --hard HEAD~
@@ -216,8 +228,8 @@ Undo the previous merge.
 And switch over to "my-issue-3" branch and rebase onto the master branch.
 
 ````sh
-$ git checkout issue3
-Switched to branch 'issue3'
+$ git checkout my-issue-3
+Switched to branch 'my-issue-3'
 $ git rebase master
 First, rewinding head to replay your work on top of it...
 Applying: append description of the pull command
@@ -256,7 +268,7 @@ Switch over to the master branch and merge "issue3" with "master".
 ````sh
 $ git checkout master
 Switched to branch 'master'
-$ git merge issue3
+$ git merge my-issue-3
 Updating 8f7aa27..96a0ff0
 Fast-forward
 myfile.txt | 1 +
