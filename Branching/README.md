@@ -183,7 +183,7 @@ Let's merge "my-issue-2" and "my-issue-3" into master.
 >NOTICE : 
 > Check Fast-forward and non Fast-forward merge state.
 > "git merge –no-ff" : The “no-fast-forward” merge option preserves the branch history and creates a merge commit, this is what happens when you merge and there is a conflict.
-> A perfect merge without conflict is made in Fast-forword state.
+> A perfect merge without conflict is made in Fast-forword.
 
 Switch to master and merge "my-issue-2" with it.
 
