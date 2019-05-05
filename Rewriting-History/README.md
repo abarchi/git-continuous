@@ -195,7 +195,7 @@ $ git reflog
 
 So when you got your repository, your branch master and few commits you can log your commits :
 
-We are going to amend the commit with the message "append description of the commit command".
+We are going to amend the commit with the message "append description of the commit command" or the commit with the message that you want.
 
 Let's do :
 
@@ -241,8 +241,11 @@ $ git commit --amend
 ```
 
 > NOTE :
-> While running a rebase on your current brach, you may run into conflicts in your changes. 
-> In that case, you will want to manually resolve those conflicts, then run "add" and "rebase --continue". 
+>
+> While running a rebase on your current branch, you may run into conflicts in your changes.
+>
+> In that case, you will want to manually resolve those conflicts, then run "add" and "rebase --continue".
+>
 > You would only want to resolve conflicts at this point, and there is no need to issue any new commits.
 >
 > If you would like to stop rebasing however, you can call "rebase --abort" which will revert and exit the entire rebase process.
@@ -251,15 +254,18 @@ $ git commit --amend
 In cases where you specify "edit" on more than a single line when calling "git rebase -i", you will be prompted to amend each of the commits one at a time.
 
 > NOTE :
+>
 > ORIG_HEAD points to the original commit before rebase actually takes place.
+>
 > This may come in handy especially when you accidentally issue a rebase.
+>
 > You can restore the previous history state by executing a rebase to ORIG_HEAD.
 
 ### Merge --squash
 
 So when you got your repository, your branch master and few commits you can log your commits :
 
-**Now, we are going to squash commits from the "issue1" branch to a single commit and merge it into the master branch !**
+**Now, we are going to squash commits from a second branch to a single commit and merge it into the master branch !**
 
 First of all, create a second branch named "my-awesome-feature" and create a few commits from a fake text file.
 
@@ -268,15 +274,17 @@ Switch over to the master branch. Execute a merge with the option --squash like 
 ```sh
 $ git checkout master 
 Switched to branch 'master' 
-$ git merge --squash issue1 
+$ git merge --squash my-awesome-feature
 Auto-merging sample.txt CONFLICT (content): Merge conflict in sample.txt 
 Squash commit -- not updating HEAD Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 Git detected a conflict, resolve it manually.
+
 Commit your changes.
 
-We now have a new commit added to the master branch which includes all of the commits in the "issue1" branch.
+We now have a new commit added to the master branch which includes all of the commits from the "my-awesome-feature" branch which is **NOT** related to your master branch with a commit added through an non fast-forward merge.
+
 You can verify the new change in the revision history using the log command.
 
 Congratulation, you finish this chapter ! :D
