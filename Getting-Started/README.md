@@ -2,8 +2,6 @@
 
 > Summary of this chapter :
 
-	.......... 
-
 * Install git
 * Default settings
 * Create a repository
