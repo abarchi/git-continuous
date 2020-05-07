@@ -22,7 +22,7 @@ Let's rewrite the first commit in the history log.
 ### Commit --amend
 So when you got your repository, your branch master and few commits you can log your commits : 
 
-It looks like something like this : 
+Imagine It looks like something like this : 
 
 ```sh
 $ git log
@@ -51,7 +51,7 @@ Log your history commits and your commit message should now be updated.
 
 So when you got your repository, your branch master and few commits you can log your commits :
 
-We are going to undo the "append description of the pull command" commit or your last commit using the "revert" command.
+Imagine we need to undo the "append description of the pull command" commit or your last commit using the "revert" command.
 
 Examine the history log using the log command.
 
