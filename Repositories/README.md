@@ -21,8 +21,6 @@ $ git remote add <*URL of the remote repository*>
 $ git remote add origin https://[your_space_id].backlogtool.com/git/[your_project_key]/tutorial.git
 ```
 
-[!!!!!!!! Ajoute un exemple plus concret de git remote add + une meilleur explication de la branche remote !!!!!!!!]
-
 To push changes to the remote repository, use the "push" command.
 
 ```sh
